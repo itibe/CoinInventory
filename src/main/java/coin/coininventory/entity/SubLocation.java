@@ -1,7 +1,8 @@
 package coin.coininventory.entity;
 
 import javax.persistence.*;
-
+@Entity
+@Table(name = "sublocation")
 public class SubLocation {
 
     @Id

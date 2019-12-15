@@ -1,14 +1,15 @@
 package coin.coininventory.entity;
 
 import javax.persistence.*;
-
+@Entity
+@Table(name = "type")
 public class CoinType {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         @Column(name = "typeid")
         private long typeid;
 
-        @OneToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
+        @ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
         @JoinColumn(name = "userfk")
         private User user;
 

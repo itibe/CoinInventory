@@ -1,7 +1,8 @@
 package coin.coininventory.entity;
 
 import javax.persistence.*;
-
+@Entity
+@Table(name = "source")
 public class Vendor {
 
     @Id
