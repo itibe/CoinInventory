@@ -38,8 +38,83 @@ public class Coin {
     @OneToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     @JoinTable(
             name = "transaction",
-            joinColumns = {@JoinColumn(name = "trantypefk", referencedColumnName = "trantypeid")},
-            inverseJoinColumns = {@JoinColumn(name = "", referencedColumnName = "", unique = true)}
+            joinColumns = {@JoinColumn(name = "coinidfk", referencedColumnName = "coindataid")}
     )
     private List<Transaction> transactionList;
+
+    public Coin() {
+
+    }
+
+    public long getCoindataid() {
+        return coindataid;
+    }
+
+    public void setCoindataid(long coindataid) {
+        this.coindataid = coindataid;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public CoinType getType() {
+        return type;
+    }
+
+    public void setType(CoinType type) {
+        this.type = type;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public String getMintmark() {
+        return mintmark;
+    }
+
+    public void setMintmark(String mintmark) {
+        this.mintmark = mintmark;
+    }
+
+    public String getSerialnumber() {
+        return serialnumber;
+    }
+
+    public void setSerialnumber(String serialnumber) {
+        this.serialnumber = serialnumber;
+    }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
+    public List<Transaction> getTransactionList() {
+        return transactionList;
+    }
+
+    public void setTransactionList(List<Transaction> transactionList) {
+        this.transactionList = transactionList;
+    }
 }

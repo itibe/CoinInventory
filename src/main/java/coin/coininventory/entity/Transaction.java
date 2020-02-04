@@ -1,6 +1,9 @@
 package coin.coininventory.entity;
 
+import org.apache.tomcat.jni.Local;
+
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -29,7 +32,7 @@ public class Transaction {
     private Vendor vendor;
 
     @Column(name = "date")
-    Date date;
+    LocalDate date;
 
     public Transaction() {
     }
@@ -74,11 +77,15 @@ public class Transaction {
         this.vendor = vendor;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
+
+
+
+
 }

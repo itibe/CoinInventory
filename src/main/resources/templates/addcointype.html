@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>add coin</title>
+    <link href="../static/css/imbeddedlayout.css" th:href="@{../static/css/layout.css}" rel="stylesheet">
+    <link href="../static/css/imbeddedstyle.css" th:href="@{../static/css/style.css}" rel="stylesheet">
+</head>
+<body>
+
+<form>
+        <div class="inputitems">
+            <p>Coin Type</p>
+             <input th:type="text" th:name="trantype" th:size="30">
+        </div>
+    <input type="submit" th:value="Submit">
+</form>
+
+</body>
+</html>
